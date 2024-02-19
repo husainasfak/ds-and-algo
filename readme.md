@@ -1,3 +1,13 @@
+### Resources
+
+- YT - https://www.youtube.com/watch?v=GPIuPRqDGG8&list=PPSV&ab_channel=DaveBurji
+
+- NeetCode Roadmap - https://neetcode.io/roadmap
+
+- Cheatsheet - https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/
+
+### Patterns
+
 ![alt text](imgs/image.png)
 
 ![alt text](imgs/image-1.png)
