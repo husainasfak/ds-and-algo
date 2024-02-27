@@ -68,10 +68,52 @@ int sol3(vector<int> arr){
      return index;
 }
 
+/*
+
+     * Sol - 4. using Binary Search
+
+     1. Define a range for binary search between 1 and n (inclusive).
+     2. For each mid value, count the number of elements in the array that are less than or equal to the mid value.
+     3. If the count is greater than the mid value, it implies that the repeated element lies within the range [1, mid], else it lies within the range [mid+1, n]. If the count is greater than the mid value, it indicates that there are more elements than there should be in the range [1, mid]. This suggests that the repeated number lies within this range, as there must be a duplicate number.
+     4. Repeat the process until you find the repeated element.
+
+*/
+int sol4(vector<int>& arr) {
+        int low = 0, high = arr.size(), count;
+        
+        while(low <=  high)
+        {
+            int mid = low + (high - low) / 2;
+            count = 0;
+            
+            for(int i : arr)
+            {
+                if(i <= mid)
+                    ++count;
+            }
+          
+               // Right search
+            if(count <= mid)
+                low = mid + 1;
+            else{
+               // left search
+               high = mid - 1;
+            }
+               
+            
+        }
+        return low;
+}
+
+/*
+
+     !TODO:  Solution - 5. using floyd's Tortoise's Algo. Cycle detection in LL
+
+*/
 
 int main(){
-     vector<int> arr{1,3,4,2,2};
-     // vector<int> arr{3,1,3,4,2};
+     // vector<int> arr{1,3,4,2,2};
+     vector<int> arr{3,1,3,4,2};
 
      // int repeatedVal = sol1(arr);
      // cout << "Repeating val "<< repeatedVal; 
@@ -80,7 +122,10 @@ int main(){
      // cout << "Repeating val "<< repeatedVal; 
 
      
-     int repeatedVal = sol3(arr);
+     // int repeatedVal = sol3(arr);
+     // cout << "Repeating val "<< repeatedVal; 
+
+     int repeatedVal = sol4(arr);
      cout << "Repeating val "<< repeatedVal; 
      
      return 0;
