@@ -1,3 +1,3 @@
 ## Array and Hashing
 
-06,07
+01, 06, 07
