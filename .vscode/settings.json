@@ -1,6 +1,11 @@
 {
   "files.associations": {
     "*.embeddedhtml": "html",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "vector": "cpp",
+    "xlocale": "cpp",
+    "ostream": "cpp",
+    "ios": "cpp",
+    "xiosbase": "cpp"
   }
 }
