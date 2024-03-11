@@ -10,21 +10,22 @@
 #include <iostream>
 using namespace std;
 
-int climbStaris(int n)
+// TLE in leetcode
+int climbStairs(int n)
 {
      // base case
      if (n == 0 || n == 1)
      { // from 0 to n. for 0th or 1st stairs 1 ways to climb
           return 1;
      }
-     return climbStaris(n - 1) + climbStaris(n - 2);
+     return climbStairs(n - 1) + climbStairs(n - 2);
 }
 
 int main()
 {
      int stairCount = 3;
 
-     int result = climbStaris(stairCount);
+     int result = climbStairs(stairCount);
 
      cout << "Ways " << result;
 }
