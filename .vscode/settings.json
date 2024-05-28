@@ -7,7 +7,12 @@
     "ostream": "cpp",
     "ios": "cpp",
     "xiosbase": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "initializer_list": "cpp",
+    "list": "cpp",
+    "type_traits": "cpp",
+    "xhash": "cpp",
+    "xutility": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }

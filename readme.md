@@ -3,7 +3,7 @@
 - YT - https://www.youtube.com/watch?v=GPIuPRqDGG8&list=PPSV&ab_channel=DaveBurji
 
 - NeetCode Roadmap - https://neetcode.io/roadmap
-
+- Coding interviews: Everything you need to prepare - https://www.techinterviewhandbook.org/coding-interview-study-plan/
 - Cheatsheet - https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/
 
 ### Patterns
