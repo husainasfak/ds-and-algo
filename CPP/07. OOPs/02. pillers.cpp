@@ -10,9 +10,11 @@ private:
   int weight;
 
 public:
+  // Constructor
   Animal() { this->age = 20; }
+  // getter
   void getAge() { cout << "Age " << age; }
-
+  // Setter
   void setAge(int age) { this->age = age; }
 };
 

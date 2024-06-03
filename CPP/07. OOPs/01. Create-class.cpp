@@ -20,7 +20,8 @@ Stack -  Static allocation -> automatic cleaning
 Heap - Dynamic memory allocation -> use new keyword   -> manual cleaning
 
 */
-class Animal {
+class Animal
+{
 private:
   int weight;
 
@@ -38,7 +39,8 @@ public:
     3. copy constructor
   */
   // override default constructor
-  Animal(string note = "") {
+  Animal(string note = "")
+  {
     this->age = 20;
     this->name = "default";
     this->note = note;
@@ -46,7 +48,8 @@ public:
 
   // Behaviour or methods
 
-  void eat() {
+  void eat()
+  {
     cout << this->name << " is Eeating" << endl;
   } // this is the pointer to current object
 
@@ -59,26 +62,27 @@ public:
   int setWeight(int weight) { return this->weight = weight; }
 
   // Copy Constructor
-  Animal(Animal &obj) { // pass by reference if pass by value it will caught in inifinite loop
+  Animal(Animal &obj)
+  { // pass by reference. if pass by value it will caught in inifinite loop
     this->age = obj.age;
     this->name = obj.name;
     this->note = obj.note;
     this->weight = obj.weight;
   }
 
-
-/*
-  Destructor use for free the memoery
-  Static memeory allocation - Destructor automatic called
-  Dynamic memeory allocation - Destructor manually
-*/
-~Animal(){
-  cout << "Inside Destructor" << endl;
-  
-}
+  /*
+    Destructor use for free the memoery
+    Static memeory allocation - Destructor automatic called
+    Dynamic memeory allocation - Destructor manually
+  */
+  ~Animal()
+  {
+    cout << "Inside Destructor" << endl;
+  }
 };
 
-int main() {
+int main()
+{
   // Object creation
 
   // Static Memory allocation
@@ -109,11 +113,10 @@ int main() {
   Animal *dFor = donky;
   Animal *eFor(elephant);
 
-  cout << "copy "<<dFor->name << endl;
-
+  cout << "copy " << dFor->name << endl;
 
   // Maually call Destructor
   delete elephant;
-  
+
   return 0;
 }

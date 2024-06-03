@@ -24,6 +24,7 @@ public:
      }
 };
 
+// Multiple inheritance
 class C : public A,
           public B
 {
@@ -31,9 +32,25 @@ public:
      int maths;
 };
 
+class Animal
+{
+protected:
+     int age;
+};
+
+class Dog : public Animal
+{
+public:
+     void print()
+     {
+          cout << this->age;
+     }
+};
+
 int main()
 {
      C obj;
-
      cout << obj.B::chemistry;
+     Dog d1;
+     d1.print();
 }
