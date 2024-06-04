@@ -75,3 +75,5 @@ an issue that arises when a class inherits from two classes that have a common a
         d.display(); // This will cause ambiguity as both B and C inherit from A
         return 0;
     }
+
+![alt text](image-1.png)
