@@ -129,6 +129,10 @@ void deleteNode(Node *&head, Node *&tail, int position) {
 
   // if LL has only one node
   if (head->next == NULL) {
+    Node* temp = head;
+    head = NULL;
+    delete temp;
+    return;
   }
 
   // Delete head node

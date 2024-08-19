@@ -170,9 +170,7 @@ int main() {
   insertAtHead(head, tail, 50);
   insertAtHead(head, tail, 60);
   insertAtHead(head, tail, 70);
-  // insertAtTail(head, tail, 77);
 
-  // insertAtPosition(head, tail, 101, 4);
   printLL(head);
   cout << "Length of LL" << findLength(head) << endl;
   deleteAtAnyPosition(4, head, tail);
