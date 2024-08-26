@@ -52,21 +52,14 @@ void reverseLL(Node *&head) {
   head = prevNode;
 }
 
-void reverseLLRecursion(Node *&head) {
-  Node *prevNode = NULL;
-  Node *currentNode = head;
-  Node *nextNode = head->next;
-  while (currentNode != NULL) {
-    currentNode->next = prevNode;
-    prevNode = currentNode;
-    currentNode = nextNode;
-    if (nextNode != NULL) {
-      nextNode = nextNode->next;
-    }
+Node *reverseLLRecursion(Node *&prevNode, Node *&currentNode) {
+  if (currentNode == NULL) {
+    return prevNode;
   }
-  head = prevNode;
+  Node *nextNode = currentNode->next;
+  currentNode->next = prevNode;
+  return reverseLLRecursion(currentNode, nextNode);
 }
-
 
 int main() {
   // Create 5 NODE LL
@@ -86,8 +79,15 @@ int main() {
   fourth->next = fifth;
 
   printLL(head);
-
+  cout << endl;
   reverseLL(head);
+  cout << endl;
+  printLL(head);
+  cout << endl;
+  Node *prevNode = NULL;
+  Node *currentNode = head;
+  head = reverseLLRecursion(prevNode, currentNode);
 
+  cout << endl;
   printLL(head);
 }
